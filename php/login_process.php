@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $user['password'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-            header("location: ../index.php");
+            header("location: index.php");
         } else {
             // Handle incorrect password
             if (!isset($_SESSION['login_attempts'])) {
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 $_SESSION['login_attempts']++;
             }
-            header("location: ../login.php?error=1");
+            header("location: login.php?error=1");
         }
     } else {
         // Handle incorrect username
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $_SESSION['login_attempts']++;
         }
-        header("location: ../login.php?error=1");
+        header("location: login.php?error=1");
     }
 
     $stmt->close();
