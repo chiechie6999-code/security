@@ -1,0 +1,21 @@
+CREATE TABLE users (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    registration_id VARCHAR(20) NOT NULL UNIQUE,
+    firstname VARCHAR(50) NOT NULL,
+    middlename VARCHAR(50),
+    familyname VARCHAR(50) NOT NULL,
+    extension VARCHAR(10),
+    birthdate DATE NOT NULL,
+    age INT(3) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    auth_question1 VARCHAR(255) NOT NULL,
+    auth_answer1 VARCHAR(255) NOT NULL,
+    auth_question2 VARCHAR(255) NOT NULL,
+    auth_answer2 VARCHAR(255) NOT NULL,
+    auth_question3 VARCHAR(255) NOT NULL,
+    auth_answer3 VARCHAR(255) NOT NULL,
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
