@@ -45,23 +45,12 @@ footer {
     width: 100%;
 }
 
-.register-container, .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 form {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.login-container form {
-    max-width: 400px;
 }
 
 .form-row {
